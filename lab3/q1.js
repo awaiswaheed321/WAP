@@ -1,4 +1,3 @@
-"use strict";
 // Question 1 Part A
 function sumOfSquares(arr) {
   return arr.map((x) => x * x).reduce((a, b) => a + b);
