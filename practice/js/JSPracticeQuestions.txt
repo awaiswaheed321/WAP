@@ -1,0 +1,114 @@
+Here are 100 JavaScript programming questions for practice:
+
+### Basic JavaScript
+1. Write a JavaScript program to declare a variable using `let` and reassign it with a different type of value.
+2. Create a function that accepts two numbers and returns their sum.
+3. Write a program that checks whether a given number is even or odd.
+4. Declare an array of numbers and find the sum of all its elements using `reduce()`.
+5. Write a program that converts a given string to uppercase.
+6. Create a program that reverses a string without using built-in methods.
+7. Write a function that returns the factorial of a number.
+8. Write a function that counts the number of vowels in a given string.
+9. Create a program that checks if a string is a palindrome.
+10. Write a function that returns the Fibonacci sequence up to a given number.
+11. Implement a function that removes duplicates from an array.
+12. Write a program that sorts an array of numbers in ascending order.
+13. Create a program that calculates the greatest common divisor (GCD) of two numbers.
+14. Write a function that checks if two strings are anagrams of each other.
+15. Create a program that finds the second largest number in an array.
+16. Implement a function that checks if an array is sorted in ascending order.
+17. Write a program that converts a decimal number to binary.
+18. Write a function that takes a string and returns the character with the highest frequency.
+19. Implement a function that finds the maximum difference between any two elements in an array.
+20. Write a function that flattens a multi-dimensional array (e.g., `[[1, 2], [3, 4]]` becomes `[1, 2, 3, 4]`).
+
+### Intermediate JavaScript
+21. Write a function that deep clones an object.
+22. Create a function that returns the sum of all integers between two given numbers, inclusive.
+23. Write a program that calculates the power of a number using recursion.
+24. Implement a function that merges two sorted arrays.
+25. Write a program that generates all permutations of a given string.
+26. Write a function to implement binary search on a sorted array.
+27. Create a function that capitalizes the first letter of each word in a sentence.
+28. Write a program that calculates the sum of the digits of a number.
+29. Write a function that returns the prime numbers between two numbers.
+30. Create a program that checks if a number is a prime number.
+31. Write a function that rotates an array by `n` positions to the right.
+32. Create a function that returns the longest word in a string.
+33. Write a program that finds the intersection of two arrays.
+34. Create a function that counts how many times a specific character appears in a string.
+35. Write a function that calculates the product of all positive integers less than or equal to a given number.
+36. Implement a function that checks if a number is a perfect square.
+37. Write a program that removes falsy values (`false`, `0`, `""`, `null`, `undefined`, and `NaN`) from an array.
+38. Write a function that implements insertion sort on an array of numbers.
+39. Create a program that checks if two arrays are equal (have the same elements in the same order).
+40. Write a function that finds the longest common prefix among a set of strings.
+
+### Functions and Arrays
+41. Write a function that concatenates two arrays without using built-in methods like `concat()`.
+42. Create a function that splits a string into an array of words without using `split()`.
+43. Write a program that removes all instances of a specific value from an array.
+44. Write a function that finds the median of an array of numbers.
+45. Create a program that generates a random string of length `n`.
+46. Write a function that counts the occurrences of each element in an array.
+47. Implement a function that returns the difference between two arrays.
+48. Write a program that merges multiple arrays into a single array.
+49. Create a function that returns the unique elements in an array.
+50. Write a function that checks if a string contains only unique characters.
+51. Write a program that converts an array of objects into an object using a specified key.
+52. Create a function that removes the first and last elements of an array.
+53. Write a function that converts a string to a URL slug.
+54. Implement a function that swaps two variables without using a temporary variable.
+55. Write a function that returns the sum of the squares of an array of numbers.
+56. Create a function that accepts a string and a character and returns an array of indices where that character appears.
+57. Write a function that generates the first `n` prime numbers.
+58. Implement a program that finds the longest increasing subsequence in an array.
+59. Write a function that checks if a string is a valid palindrome, ignoring case and non-alphabetical characters.
+60. Write a function that returns the largest element in an array using recursion.
+
+### Objects and ES6 Features
+61. Write a program that destructures an object into individual variables.
+62. Create a function that compares two objects for deep equality.
+63. Write a function that returns the keys and values of an object as separate arrays.
+64. Implement a function that freezes an object and prevents any changes.
+65. Write a function that uses the spread operator to merge two objects.
+66. Create a function that returns the properties of an object that have a specific value.
+67. Write a function that creates an object from two arrays: one of keys and one of values.
+68. Implement a program that counts the number of properties in an object.
+69. Write a function that uses object destructuring to swap properties between two objects.
+70. Create a program that adds a method to an object dynamically.
+71. Write a function that returns the first truthy value from an array of objects.
+72. Create a function that checks if an object contains a specific key.
+73. Write a function that converts a given object into a query string.
+74. Implement a function that checks if an object is a deep clone of another.
+75. Write a function that filters an array of objects based on a specific key-value pair.
+76. Create a function that takes an object and returns a new object with only the keys that have truthy values.
+77. Write a function that uses the rest parameter to accept any number of arguments and return their sum.
+78. Implement a program that adds a default value to an object if the property doesn’t exist.
+79. Write a function that returns the sum of all values in an object where the value is a number.
+80. Write a function that flattens a deeply nested object.
+
+### Advanced JavaScript
+81. Write a function that implements memoization for a recursive function.
+82. Create a function that debounces a given function.
+83. Write a function that throttles the execution of another function.
+84. Implement a function that returns a closure.
+85. Write a program that demonstrates how hoisting works in JavaScript.
+86. Create a function that uses promises to simulate a delay in execution.
+87. Write a function that handles asynchronous code using async/await.
+88. Implement a function that takes two callbacks: one for success and one for failure.
+89. Write a program that demonstrates the difference between `let` and `var` in a loop.
+90. Create a function that returns a promise that resolves after a specific time.
+91. Write a function that performs an AJAX request using `fetch()`.
+92. Create a function that checks if a string is a valid JSON string.
+93. Write a function that implements a custom event emitter.
+94. Implement a program that uses the `Proxy` object to add logging to object property access.
+95. Write a function that implements a simple Observer pattern.
+96. Create a function that uses the module pattern to create a private variable.
+97. Write a program that demonstrates the use of the `this` keyword in different contexts.
+98. Write a function that creates a private counter using closures.
+99. Implement a function that uses destructuring to extract values from a nested object.
+100. Write a function that demonstrates the difference between shallow and deep copying.
+
+These questions should give you plenty of opportunities to practice different JavaScript concepts, from basics to more advanced features like ES6 and asynchronous programming!
+
