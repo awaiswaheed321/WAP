@@ -24,14 +24,43 @@ function run() {
   // console.log(q15([1,5,6,1]));
   //   console.log(q16([1, 2, 3, 4, 5]));
   //   console.log(q16([1, 3, 2, 4]));
-  console.log(q17(10));
+  //   console.log(q17(10));
+  //   console.log(q18("hello"));
+  //   console.log(q18("javascript"));
+  console.log(q20([[1, 2], [3, 4]]));
+}
+
+// Write a function that flattens a multi-dimensional array (e.g., `[[1, 2], [3, 4]]` becomes `[1, 2, 3, 4]`)
+function q20(arr) {
+    if (!Array.isArray(arr)) return null;
+    return arr.flatMap(x => x)
+}
+
+// Implement a function that finds the maximum difference between any two elements in an array.
+function q19(arr) {
+  if (!Array.isArray(arr) || arr.length < 2) return null;
+  arr.sort((e1, e2) => {
+    if (e1 > e2) return 1;
+    if (e2 > e1) return -1;
+    return 0;
+  });
+  return arr[arr.length - 1] - arr[0];
 }
 
 // Write a function that takes a string and returns the character with the highest frequency.
-// function q18(str) {
-//     if(typeof str != 'string') return null;
-//     Map<String, Number> m1 = new HashMap<>();
-// }
+function q18(str) {
+  if (typeof str != "string") return null;
+  let map = new Map();
+  for (let i = 0; i < str.length; i++) {
+    if (map.has(str.charAt(i))) {
+      map.set(str.charAt(i), map.get(str.charAt(i)) + 1);
+    } else {
+      map.set(str.charAt(i), 1);
+    }
+  }
+  let sortedArray = [...map.entries()].sort((a, b) => b[1] - a[1]);
+  return sortedArray[0][0];
+}
 
 // Write a program that converts a decimal number to binary.
 function q17(num) {
