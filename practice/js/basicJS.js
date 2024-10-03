@@ -28,12 +28,73 @@ function run() {
   //   console.log(q18("hello"));
   //   console.log(q18("javascript"));
   // console.log(q20([[1, 2], [3, 4]]));
+  // test3();
+  test4();
+}
+
+function test4() {
+  var a=1;
+  let b=2;
+  function outer() {
+    let c=3;
+    var d=4;
+    let func = function inner() {
+      let b=5;
+      let c=6;
+      console.log(a,b,c,d);
+    }
+    return func;
+  }
+  outer()();
+}
+
+function test3() {
+  var foo = 1;
+  function bar() {
+    if(!foo) {
+      var foo = 10;
+    }
+    console.log(foo);
+  }
+  bar();
+}
+
+function test2() {
+  var x = 9;
+  function myFunction() {
+    return x * x;
+  }
+  console.log(myFunction());
+  x = 5;
+  console.log(myFunction());
+}
+
+function test1() {
+  let x;
+  var a = 5;
+  var b = 10;
+  var c = function (a, b, c) {
+    console.log(x);
+    console.log(a);
+    var f = function (a, b, c) {
+      b = a;
+      console.log(b);
+      b = c;
+      var x = 5;
+    };
+    f(a, b, c);
+    console.log(b);
+    var x = 10;
+  };
+  c(8, 9, 10);
+  console.log(b);
+  console.log(x);
 }
 
 // Write a function that flattens a multi-dimensional array (e.g., `[[1, 2], [3, 4]]` becomes `[1, 2, 3, 4]`)
 function q20(arr) {
-    if (!Array.isArray(arr)) return null;
-    return arr.flatMap(x => x)
+  if (!Array.isArray(arr)) return null;
+  return arr.flatMap((x) => x);
 }
 
 // Implement a function that finds the maximum difference between any two elements in an array.
