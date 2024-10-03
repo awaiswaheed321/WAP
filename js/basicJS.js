@@ -27,7 +27,7 @@ function run() {
   //   console.log(q17(10));
   //   console.log(q18("hello"));
   //   console.log(q18("javascript"));
-  console.log(q20([[1, 2], [3, 4]]));
+  // console.log(q20([[1, 2], [3, 4]]));
 }
 
 // Write a function that flattens a multi-dimensional array (e.g., `[[1, 2], [3, 4]]` becomes `[1, 2, 3, 4]`)
