@@ -5,6 +5,6 @@ export class Rabbit extends Animal {
     super(name, speed);
   }
   hide() {
-    console.log("Rabbit hides");
+    console.log(this.name + " hides");
   }
 }

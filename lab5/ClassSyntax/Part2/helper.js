@@ -12,3 +12,4 @@ animal2.run();
 rabbit1.run();
 rabbit2.run();
 console.log("After increasing speed", animal1, animal2, rabbit1, rabbit2);
+rabbit1.hide();
