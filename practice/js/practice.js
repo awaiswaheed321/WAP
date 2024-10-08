@@ -81,15 +81,23 @@
 
 // p.then((r) => console.log(r)).catch((e) => console.log(e));
 
-console.log("start");
-async function foo() {
-  return " done ! ";
-}
-async function bar() {
-  console.log(" insidebar - start");
-  let result = await foo();
-  console.log(result);
-  console.log("insidebar - end");
-}
-bar();
-console.log("end");
+// console.log("start");
+// async function foo() {
+//   return " done ! ";
+// }
+// async function bar() {
+//   console.log(" insidebar - start");
+//   let result = await foo();
+//   console.log(result);
+//   console.log("insidebar - end");
+// }
+// bar();
+// console.log("end");
+
+// setTimeout(() => { console.log('timeout'); }, 0);
+// setImmediate(() => { console.log('immediate'); });
+// process.nextTick(()=> console.log('nexttick'));
+
+// setTimeout(() => console.log("this is setTimeout..."), 0);
+// setImmediate(() => { console.log('immediate'); });
+
