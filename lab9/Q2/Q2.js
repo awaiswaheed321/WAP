@@ -63,4 +63,14 @@ const server = http.createServer((req, res) => {
     res.end(JSON.stringify({ code: 404, error: "URL not found." }));
   }
 });
-server.listen(3000);
+
+server.listen(3000, () => {
+  console.log("Server started on localhost:3000");
+  console.log("Available URLs:");
+  console.log("  - localhost:3000/image");
+  console.log("  - localhost:3000/pdf");
+  console.log("  - localhost:3000/about");
+  console.log("  - localhost:3000/ OR localhost:3000/home");
+  console.log("\nAll other URLs will throw Error 404");
+  console.log("\n API Call Logs =>");
+});
