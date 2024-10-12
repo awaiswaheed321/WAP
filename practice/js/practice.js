@@ -414,3 +414,52 @@
 //   { name: "Item3", price: 20 },
 // ];
 // calculateTotalPrice(items);
+
+// function a() {
+//   console.log(x); // consult Global for x and print 20 from Global
+// }
+// function b() {
+//   const x = 10;
+//   a(); // consult Global for a
+// }
+// const x = 20;
+// b();
+
+// function b() {
+//   function a() {
+//     console.log(x);
+//   }
+//   const x = 10;
+//   a();
+// }
+// const x = 20;
+// b();
+
+// let user = {
+//   firstName: "John",
+//   sayHi() {
+//     console.log(`Hello, ${this.firstName}!`);
+//   },
+// };
+// user.sayHi(); //works
+// let hi = user.sayHi();
+// hi.bind(user)(); //works
+// hi.call(user); //works
+// hi.apply(user);
+
+// const user = {
+//   salute: "",
+//   greet: function () {
+//     this.salute = "Hello";
+//     console.log(this.salute); //Hello
+//     const setFrench = function (newSalute) {
+//       //inner function
+//       this.salute = newSalute;
+//     };
+//     setFrench("Bonjour");
+//     console.log(this.salute); //Bonjour??
+//   },
+// };
+// user.greet.call(user);
+
+
