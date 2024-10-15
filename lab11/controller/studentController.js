@@ -8,6 +8,7 @@ const studentController = {
     }
     next();
   },
+
   // Get Student by ID
   getStudentById: (req, res, next) => {
     const id = req.params.id;
@@ -19,6 +20,7 @@ const studentController = {
       } else res.status(404).json({ message: "Not found a student" });
     } else res.status(400).json({ message: "provide id" });
   },
+
   // Create Student
   createStudent: (req, res, next) => {
     const { id, name, program } = req.body;
@@ -33,6 +35,7 @@ const studentController = {
       res.status(400).json({ message: "provide all information" });
     }
   },
+
   //   Delete Student By ID
   deleteStudentById: (req, res, next) => {
     const id = req.params.id;
@@ -42,6 +45,7 @@ const studentController = {
       else res.status(404).json({ message: "student not found" });
     } else res.status(400).json({ message: "provide all information" });
   },
+
   //   Update Student
   updateStudentById: (req, res, next) => {
     const id = req.params.id;
@@ -58,6 +62,7 @@ const studentController = {
       res.status(404).json({ message: `Student with ID: ${id} not found.` });
     }
   },
+
   //   Get Students with sort and filter
   getStudentsByQuerystring: (req, res, next) => {
     const { sort, order = "asc", program } = req.query;
@@ -76,7 +81,6 @@ const studentController = {
     } else {
       students = Student.getAll();
     }
-
     res.status(200).json(students);
   },
 };

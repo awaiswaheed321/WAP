@@ -10,13 +10,18 @@ export default class Student {
     this.name = name;
     this.program = program;
   }
+
+  //   Get ALL Students
   static getAll() {
     return structuredClone(students); //students.map(e=>e)
   }
+
+  //   Get Student by ID
   static getStudentById(id) {
     return students.find((e) => e.id === id);
   }
 
+  //   Create new Student
   create() {
     let student = students.find((e) => e.id == this.id);
     if (!student) {
@@ -25,6 +30,7 @@ export default class Student {
     }
   }
 
+  //   Delete Student By ID
   static deleteById(id) {
     const index = students.findIndex((e) => e.id == id);
     if (index !== -1) {
@@ -32,6 +38,7 @@ export default class Student {
     }
   }
 
+  //   Helper function for sorting.
   static sorting(field, order) {
     return (e1, e2) => {
       return typeof e1[field] === "number"
@@ -40,20 +47,24 @@ export default class Student {
     };
   }
 
+  //   Get Sorted Students Data
   static sortBy(field, order) {
     return Student.getAll().sort(this.sorting(field, order));
   }
 
+  //   Get Students data filtered by Program and sorted
   static getStudentsByProgramSorted(program, field, order) {
     return this.getStudentsByProgram(program).sort(this.sorting(field, order));
   }
 
+  //   Get Students data filtered by Program
   static getStudentsByProgram(program) {
     return students.filter(
       (s) => s.program.toUpperCase() === program.toUpperCase()
     );
   }
 
+  //   Update Student data by ID
   static updateStudent(id, newName, newProgram) {
     const index = students.findIndex((s) => s.id === id);
     if (index === -1) {
