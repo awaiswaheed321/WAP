@@ -24,8 +24,11 @@ const studentController = {
     const { id, name, program } = req.body;
     if (id && name && program) {
       const student = new Student(id, name, program);
-      if (student.create()) res.status(201).json({ message: "created" });
-      else res.status(409).json({ message: "student is already existed" });
+      if (student.create()) {
+        res.status(201).json({ message: "created" });
+      } else {
+        res.status(409).json({ message: "student is already existed" });
+      }
     } else {
       res.status(400).json({ message: "provide all information" });
     }
