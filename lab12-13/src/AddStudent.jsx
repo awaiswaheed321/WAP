@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function AddStudent() {
+export default function AddStudent({ setStudents }) {
   const [formData, setFormData] = useState({
     id: "",
     name: "",
@@ -41,6 +41,7 @@ export default function AddStudent() {
         alert(
           `Success: Student Created with ID: ${formData.id}, Name: ${formData.name} and Program: ${formData.program}`
         );
+        setStudents((prevStudents) => [...prevStudents, data]);
         setFormData({
           id: "",
           name: "",
