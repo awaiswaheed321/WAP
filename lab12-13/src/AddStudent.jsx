@@ -64,7 +64,8 @@ export default function AddStudent() {
   };
 
   return (
-    <div className="add-student-container">
+    <div className="container">
+        <div className="add-student-container">
       <h1>Create a Student</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="studentId">ID:</label>
@@ -118,6 +119,7 @@ export default function AddStudent() {
           </button>
         </div>
       </form>
+    </div>
     </div>
   );
 }
