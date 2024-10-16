@@ -65,61 +65,61 @@ export default function AddStudent() {
 
   return (
     <div className="container">
-        <div className="add-student-container">
-      <h1>Create a Student</h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="studentId">ID:</label>
-        <br />
-        <input
-          id="studentId"
-          type="number"
-          placeholder="Student ID"
-          className="info-inputs"
-          name="id"
-          value={formData.id}
-          onChange={handleChange}
-          required
-        />
-        <br />
-        <label htmlFor="studentName">Name:</label>
-        <br />
-        <input
-          id="studentName"
-          type="text"
-          placeholder="Student Name"
-          className="info-inputs"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
-        <br />
-        <label htmlFor="studentProgram">Program:</label>
-        <br />
-        <input
-          id="studentProgram"
-          type="text"
-          placeholder="Student Program"
-          className="info-inputs"
-          name="program"
-          value={formData.program}
-          onChange={handleChange}
-          required
-        />
-        <div className="button-container">
-          <button type="reset" className="reset-button" onClick={handleReset}>
-            Reset
-          </button>
-          <button
-            type="submit"
-            className="submit-button"
-            onClick={handleSubmit}
-          >
-            Submit
-          </button>
-        </div>
-      </form>
-    </div>
+      <div className="add-student-container">
+        <h1 className="heading">Create a Student</h1>
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="studentId">ID:</label>
+          <br />
+          <input
+            id="studentId"
+            type="number"
+            placeholder="Student ID"
+            className="info-inputs"
+            name="id"
+            value={formData.id}
+            onChange={handleChange}
+            required
+          />
+          <br />
+          <label htmlFor="studentName">Name:</label>
+          <br />
+          <input
+            id="studentName"
+            type="text"
+            placeholder="Student Name"
+            className="info-inputs"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+          <br />
+          <label htmlFor="studentProgram">Program:</label>
+          <br />
+          <input
+            id="studentProgram"
+            type="text"
+            placeholder="Student Program"
+            className="info-inputs"
+            name="program"
+            value={formData.program}
+            onChange={handleChange}
+            required
+          />
+          <div className="button-container">
+            <button type="reset" className="reset-button" onClick={handleReset}>
+              Reset
+            </button>
+            <button
+              type="submit"
+              className="submit-button"
+              onClick={handleSubmit}
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }
