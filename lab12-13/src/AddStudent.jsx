@@ -38,9 +38,17 @@ export default function AddStudent() {
         body: JSON.stringify(data),
       });
       if (response.ok) {
-        alert(`Success: Student Created.`);
+        alert(
+          `Success: Student Created with ID: ${formData.id}, Name: ${formData.name} and Program: ${formData.program}`
+        );
+        setFormData({
+          id: "",
+          name: "",
+          program: "",
+        });
       } else {
-        alert(`Error: ${response.statusText}`);
+        const responseJson = await response.json();
+        alert(`Error: ${responseJson.message}`);
       }
     } catch (error) {
       alert(`Fetch error: ${error.message}`);

@@ -29,10 +29,10 @@ const studentController = {
       if (student.create()) {
         res.status(201).json({ message: "created" });
       } else {
-        res.status(409).json({ message: "student is already existed" });
+        res.status(409).json({ message: "Student exists already" });
       }
     } else {
-      res.status(400).json({ message: "provide all information" });
+      res.status(400).json({ message: "Provide all information" });
     }
   },
 
