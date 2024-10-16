@@ -116,7 +116,7 @@ export default function AddStudent({ setStudents }) {
               className="submit-button"
               onClick={handleSubmit}
             >
-              Submit
+              Register
             </button>
           </div>
         </form>

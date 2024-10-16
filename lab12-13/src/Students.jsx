@@ -1,6 +1,6 @@
 export default function Students({ students }) {
   return (
-    <div className="container">
+    <div className="container container2">
       <div className="students-container">
         <h1 className="heading">All Students</h1>
         <table className="students-table">
