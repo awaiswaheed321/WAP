@@ -112,6 +112,14 @@ td {
 }
 
 th {
-  background-color: #f2f2f2;
+  background-color: hsl(173, 58%, 39%);
   text-align: center;
+}
+
+.even-row {
+  background-color: #f9f9f9;
+}
+
+.odd-row {
+  background-color: #e0e0e0;
 }
