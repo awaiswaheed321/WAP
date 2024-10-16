@@ -1,10 +1,16 @@
 import express from "express";
 import studentRouter from "./route/studentRoute.js";
+import cors from "cors";
 
 const app = express();
 
 app.set("port", process.env.PORT || 3000);
 const port = app.get("port");
+app.use(
+  cors({
+    origin: "http://localhost:3001",
+  })
+);
 // Request Logging middleware
 app.use(express.json());
 app.use((req, _, next) => {
