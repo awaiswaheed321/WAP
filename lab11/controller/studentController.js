@@ -13,11 +13,10 @@ const studentController = {
   getStudentById: (req, res, next) => {
     const id = req.params.id;
     if (id) {
-      console.log(typeof id);
       const student = Student.getStudentById(id * 1);
       if (student) {
         res.status(200).json(student);
-      } else res.status(404).json({ message: "Not found a student" });
+      } else res.status(404).json({ message: `No Student found with ID: ${id}` });
     } else res.status(400).json({ message: "provide id" });
   },
 
@@ -25,7 +24,7 @@ const studentController = {
   createStudent: (req, res, next) => {
     const { id, name, program } = req.body;
     if (id && name && program) {
-      const student = new Student(id, name, program);
+      const student = new Student(id * 1, name, program);
       if (student.create()) {
         res.status(201).json({ message: "created" });
       } else {
