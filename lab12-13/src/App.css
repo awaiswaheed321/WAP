@@ -103,6 +103,21 @@ button {
   background-color: hsl(249, 100%, 40%);
 }
 
+.centered-button {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.delete-button {
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  background-color: hsl(0, 98%, 47%);
+}
+
+.delete-button:hover {
+  background-color: hsl(0, 98%, 37%);
+}
+
 table {
   width: 100%;
   border-collapse: collapse;

@@ -36,7 +36,7 @@ function App() {
     <div className="App">
       <Header />
       <AddStudent setStudents={setStudents} />
-      <Students students={students} />
+      <Students students={students} setStudents={setStudents} />
       <Footer />
     </div>
   );
