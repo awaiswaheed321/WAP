@@ -462,4 +462,55 @@
 // };
 // user.greet.call(user);
 
+// console.log('Start');
+// new Promise((resolve, reject) => {
+//     console.log('1');
+//     setTimeout(()=> resolve(2), 1000);
+// }).then(console.log);
+// console.log('end')
 
+// import express from "express";
+// const app = express();
+
+// app.all("/", (req, res, next) => {
+//   res.send("it is use all");
+// });
+
+// app.get(
+//   "/abc",
+//   (req, res, next) => {
+//     console.log("1");
+//     next();
+//   },
+//   (req, res, next) => {
+//     console.log("2");
+//     throw new Error("Something went wrong");
+//     res.send("end");
+//   }
+// );
+
+// app.use((err, req, res, next) => {
+//   res.send(err.message);
+// });
+
+// app.listen(3000, () => {
+//   console.log("Server Started");
+// });
+
+console.log("Start");
+process.nextTick(() => {
+  console.log("Tick 1");
+  setTimeout(() => {
+    console.log("Timeout 1");
+  }, 2000);
+});
+process.nextTick(() => {
+  console.log("Tick 2");
+});
+setImmediate(() => {
+  console.log("setImmediate");
+});
+setTimeout(() => {
+  console.log("Timeout 2");
+}, 1000);
+console.log("end");
