@@ -1,5 +1,4 @@
 import http from "http";
-import Expense from "./Expense.js";
 import fs from "fs";
 
 const server = http.createServer();
