@@ -497,20 +497,124 @@
 //   console.log("Server Started");
 // });
 
-console.log("Start");
-process.nextTick(() => {
-  console.log("Tick 1");
-  setTimeout(() => {
-    console.log("Timeout 1");
-  }, 2000);
+// console.log("Start");
+// process.nextTick(() => {
+//   console.log("Tick 1");
+//   setTimeout(() => {
+//     console.log("Timeout 1");
+//   }, 2000);
+// });
+// process.nextTick(() => {
+//   console.log("Tick 2");
+// });
+// setImmediate(() => {
+//   console.log("setImmediate");
+// });
+// setTimeout(() => {
+//   console.log("Timeout 2");
+// }, 1000);
+// console.log("end");
+
+// import fs from "fs";
+
+// console.log("start");
+
+// fs.readFile("input.txt", "utf8", (err, data) => {
+//   if (err) throw err;
+//   console.log("File content:", data);
+//   setImmediate(() => console.log("Immediate inside file read"));
+//   process.nextTick(() => console.log("Next tick inside file read"));
+// });
+
+// setImmediate(() => console.log("Immediate outside"));
+// process.nextTick(() => console.log("Next tick 1"));
+
+// Promise.resolve().then(() => console.log("Promise resolved"));
+
+// setTimeout(() => console.log("Timeout 1"), 1000);
+
+// console.log("end");
+
+// import fs from "fs";
+
+// console.log("start");
+
+// process.nextTick(() => console.log("Next tick 1"));
+
+// fs.readFile("input.txt", "utf8", (err, data) => {
+//   if (err) throw err;
+//   console.log("File content:", data);
+//   setTimeout(() => console.log("Timeout inside file read"), 500);
+// });
+
+// setTimeout(() => console.log("Timeout 1"), 1000);
+// setImmediate(() => console.log("Immediate outside"));
+
+// Promise.resolve().then(() => console.log("Promise resolved"));
+
+// console.log("end");
+
+// import fs from "fs";
+
+// console.log("start");
+
+// fs.readFile("input.txt", "utf8", (err, data) => {
+//   if (err) throw err;
+//   console.log("File read complete:", data);
+// });
+
+// setImmediate(() => console.log("Immediate 1"));
+// setTimeout(() => console.log("Timeout 1"), 1000);
+
+// process.nextTick(() => console.log("Next tick 1"));
+
+// Promise.resolve().then(() => console.log("Promise resolved"));
+
+// console.log("end");
+
+// import fs from 'fs';
+
+// console.log('start');
+
+// fs.readFile('input.txt', 'utf8', (err, data) => {
+//     if (err) throw err;
+//     console.log('File read complete:', data);
+//     setTimeout(() => console.log('Timeout inside file read'), 500);
+//     setImmediate(() => {
+//       console.log('Immediate inside file read');
+//       process.nextTick(() => console.log('Next tick inside file read immediate'));
+//       Promise.resolve().then(() => console.log('Promise resolved inside  file read immediate'));
+//     });
+//     process.nextTick(() => console.log('Next tick inside file read'));
+// });
+
+// setImmediate(() => console.log('Immediate 1'));
+// process.nextTick(() => console.log('Next tick 1'));
+// Promise.resolve().then(() => console.log('Promise resolved'));
+// Promise.resolve().then(() => console.log('Promise resolved 2'));
+// setTimeout(() => console.log('Timeout 1'), 1000);
+
+// console.log('end');
+
+import fs from "fs";
+
+console.log("start");
+
+setImmediate(() => console.log("Immediate 1"));
+process.nextTick(() => console.log("Next tick 1"));
+
+fs.readFile("input.txt", "utf8", (err, data) => {
+  if (err) throw err;
+  console.log("File read complete:", data);
+  process.nextTick(() => console.log("Next tick inside file read"));
+  setTimeout(() => console.log("Timeout inside file read"), 0);
 });
-process.nextTick(() => {
-  console.log("Tick 2");
+
+Promise.resolve().then(() => {
+  console.log("Promise resolved");
+  setImmediate(() => console.log("Immediate inside promise"));
 });
-setImmediate(() => {
-  console.log("setImmediate");
-});
-setTimeout(() => {
-  console.log("Timeout 2");
-}, 1000);
+
+setTimeout(() => console.log("Timeout 1"), 500);
+
 console.log("end");
