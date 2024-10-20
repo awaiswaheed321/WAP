@@ -596,25 +596,69 @@
 
 // console.log('end');
 
+// import fs from "fs";
+
+// console.log("start");
+
+// setImmediate(() => console.log("Immediate 1"));
+// process.nextTick(() => console.log("Next tick 1"));
+
+// fs.readFile("input.txt", "utf8", (err, data) => {
+//   if (err) throw err;
+//   console.log("File read complete:", data);
+//   process.nextTick(() => console.log("Next tick inside file read"));
+//   setTimeout(() => console.log("Timeout inside file read"), 0);
+// });
+
+// Promise.resolve().then(() => {
+//   console.log("Promise resolved");
+//   setImmediate(() => console.log("Immediate inside promise"));
+// });
+
+// setTimeout(() => console.log("Timeout 1"), 500);
+
+// console.log("end");
+
+// import { fileURLToPath } from 'url';
+
+// // Get the file path of the current ES module file
+// const __filename = fileURLToPath(import.meta.url);
+
+// console.log(__filename);
+
+import url from "url";
+import { URL } from "url";
+import path from "path";
 import fs from "fs";
+import { dir } from "console";
 
-console.log("start");
+const __filename = url.fileURLToPath(import.meta.url);
+console.log(__filename);
+const dirName = path.dirname(__filename);
+console.log(dirName);
 
-setImmediate(() => console.log("Immediate 1"));
-process.nextTick(() => console.log("Next tick 1"));
+const filePath = path.join(dirName, "input.txt");
 
-fs.readFile("input.txt", "utf8", (err, data) => {
-  if (err) throw err;
-  console.log("File read complete:", data);
-  process.nextTick(() => console.log("Next tick inside file read"));
-  setTimeout(() => console.log("Timeout inside file read"), 0);
-});
+// const content = fs.readFileSync(filePath, "utf-8");
+// console.log(content);
 
-Promise.resolve().then(() => {
-  console.log("Promise resolved");
-  setImmediate(() => console.log("Immediate inside promise"));
-});
+// fs.readFile(filePath, "utf-8", (err, data) => {
+//   if (err) console.error(err);
+//   else console.log(data);
+//   fs.writeFile(filePath, "New text 2", {flag: 'a'}, (err) => {
+//     if(err) console.log(err);
+//     else console.log('done');
+//     fs.readFile(filePath, "utf-8", (err, data) => {
+//       if (err) console.error(err);
+//       else console.log(data); 
+//     });
+//   })
+// });
 
-setTimeout(() => console.log("Timeout 1"), 500);
+// fs.writeFileSync(filePath, "Hello", {flag: 'a'})
 
-console.log("end");
+const myUrl = new URL('https://example.com/path?name=John&age=30#section');
+// console.log(myUrl);
+const adr = 'http://localhost:8080/default.htm?year=2017&month=february';
+const q = url.parse(adr, true);
+console.log(q)
