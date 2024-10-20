@@ -650,15 +650,28 @@ const filePath = path.join(dirName, "input.txt");
 //     else console.log('done');
 //     fs.readFile(filePath, "utf-8", (err, data) => {
 //       if (err) console.error(err);
-//       else console.log(data); 
+//       else console.log(data);
 //     });
 //   })
 // });
 
 // fs.writeFileSync(filePath, "Hello", {flag: 'a'})
 
-const myUrl = new URL('https://example.com/path?name=John&age=30#section');
-// console.log(myUrl);
-const adr = 'http://localhost:8080/default.htm?year=2017&month=february';
-const q = url.parse(adr, true);
-console.log(q)
+// const myUrl = new URL('https://example.com/path?name=John&age=30#section');
+// // console.log(myUrl);
+// const adr = 'http://localhost:8080/default.htm?year=2017&month=february';
+// const q = url.parse(adr, true);
+// console.log(q)
+// import fs from "fs";
+// process.nextTick(() => console.log("nextTick 1"));
+// Promise.resolve().then(() => console.log("promise 1"));
+// setImmediate(() => {
+//   console.log("setImmediate 1");
+// });
+// setTimeout(() => console.log("setTimeout 1"), 0);
+// fs.readFile("./input.txt", "utf-8", (err, data) => {
+//   if (err) console.log("there is an error. can not read from file");
+//   else {
+//     console.log(data);
+//   }
+// });
