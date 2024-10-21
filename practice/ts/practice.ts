@@ -62,3 +62,8 @@ const employee: Employee = {
   name: "Alice",
   employeeId: 12345,
 };
+
+type Array1 = string[];
+
+const a: Array1 = ["Asas","sasa"];
+console.log(a);
